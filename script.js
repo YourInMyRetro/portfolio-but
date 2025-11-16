@@ -55,12 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
             "project_tech_label": "Technologie",
             "project_context_label": "Contexte",
             "project_access": "Accéder",
-            "project_code": "Voir le code",
+            "project_code": "Accéder",
             "project_type_web": "Site Web",
             "project_type_game": "Jeu Vidéo",
+            "project_type_app": "Application de bureau", // Ajouté
             "project_context_uni": "Projet Universitaire",
             "project_context_perso": "Projet Personnel",
-            "project_ecommerce_title": "Projet E-commerce",
+            "project_ecommerce_title": "Projet Clonage site FIFA",
             "project_ecommerce_desc": "Clonage d'un site e-commerce. Conception de la BDD (MCD, MLD) et développement (SQL, HTML, CSS, JS).",
             "project_ecommerce_context": "Projet Universitaire (Équipe de 5)",
             "project_ecommerce_tech": "HTML, CSS, JS, SQL",
@@ -76,6 +77,14 @@ document.addEventListener("DOMContentLoaded", function() {
             "project_this_desc": "Le site que vous consultez actuellement. Conçu en HTML, CSS et JavaScript pur, sa création a été réalisée à l'aide d'une IA supervisée suivant méticuleusement mes directives de conception et de fonctionnalité.",
             "project_this_context": "Projet Personnel / Universitaire",
             "project_this_tech": "HTML5, CSS3, JavaScript",
+            
+            // --- MODIFICATION LOXAM FR ---
+            "project_loxam_title": "App. Gestion Loxam",
+            "project_loxam_desc": "App desktop pour gérer les locations et réparations de Loxam. Interface en C# (WPF) et BDD PostgreSQL avec gestion des rôles.",
+            "project_loxam_date": "Mai 2025",
+            "project_loxam_tech": "C#, WPF, PostgreSQL",
+            // --- FIN MODIFICATION ---
+            
             // Education
             "title_education": "FORMATION",
             "edu1_date": "2024 - 2026",
@@ -158,12 +167,13 @@ document.addEventListener("DOMContentLoaded", function() {
             "project_tech_label": "Technology",
             "project_context_label": "Context",
             "project_access": "Access",
-            "project_code": "View Code",
+            "project_code": "Acess",
             "project_type_web": "Website",
             "project_type_game": "Video Game",
+            "project_type_app": "Desktop App", // Ajouté
             "project_context_uni": "University Project",
             "project_context_perso": "Personal Project",
-            "project_ecommerce_title": "E-commerce Project",
+            "project_ecommerce_title": "FIFA Site Clone Project",
             "project_ecommerce_desc": "E-commerce website clone. DB Design (MCD, MLD) and development (SQL, HTML, CSS, JS).",
             "project_ecommerce_context": "University Project (5-person team)",
             "project_ecommerce_tech": "HTML, CSS, JS, SQL",
@@ -179,6 +189,14 @@ document.addEventListener("DOMContentLoaded", function() {
             "project_this_desc": "The website you are currently viewing. Built with HTML, CSS, and pure JavaScript, its creation was achieved using a supervised AI meticulously following my design and functional directives.",
             "project_this_context": "Personal / University Project",
             "project_this_tech": "HTML5, CSS3, JavaScript",
+
+            // --- MODIFICATION LOXAM EN ---
+            "project_loxam_title": "Loxam Management App",
+            "project_loxam_desc": "Desktop app to manage rentals and repairs for Loxam employees. C# (WPF) interface and PostgreSQL DB with role-based access.",
+            "project_loxam_date": "May 2025",
+            "project_loxam_tech": "C#, WPF, PostgreSQL",
+            // --- FIN MODIFICATION ---
+            
             // Education
             "title_education": "EDUCATION",
             "edu1_date": "2024 - 2026",
@@ -238,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Gère la traduction
         document.querySelectorAll('[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
-            if (translations[lang][key]) {
+            if (translations[lang] && translations[lang][key]) {
                 el.textContent = translations[lang][key];
             }
         });
